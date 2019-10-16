@@ -1,8 +1,10 @@
 <template>
+<section id="about">
     <div class="aboutMe">
         <h3>{{title}}</h3>
         <p>{{description}}</p>
 	</div>
+</section>
 </template>
 <script>
 export default {
@@ -39,4 +41,10 @@ export default {
     width: 50%;
     margin: 0 auto;
   }
+  /* media query */
+@media screen and (max-width: 600px) {
+    .aboutMe {
+        padding: 50px 0 180px 0;
+    }
+}
 </style>

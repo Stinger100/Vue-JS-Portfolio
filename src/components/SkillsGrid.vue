@@ -1,4 +1,5 @@
 <template>
+<section id="skills">
 <div class="skillsGrid">
 		<div class="skillGrid" v-for="item in skills" :key="item.name">
 			<div class="skill_title">
@@ -17,7 +18,7 @@
 			</div>
 		</div>
 	</div>
-    
+</section>
 </template>
 <script>
 export default {
@@ -70,6 +71,7 @@ export default {
   .skillGrid {
     display: flex;
     flex-direction: column;
+	flex-wrap: wrap;
     border-bottom: 0px solid #E6ECF8;
     border-right: 1px solid #E6ECF8;
     box-shadow: 0 5px 5px 0 rgba(233,240,243,0.5), 0 0 0 1px #E6ECF8;
@@ -88,4 +90,14 @@ export default {
   .skill_title {
       text-align: center;
   }
+  /* media queries */
+  @media screen and (max-width: 600px) {
+	  .skillGrid {
+		  flex: 0 80%;
+	  }
+	 .skillsGrid {
+		 padding-bottom: 700px;
+	 }
+  }
+  
 </style>

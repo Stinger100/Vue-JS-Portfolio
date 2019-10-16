@@ -7,9 +7,9 @@
 					{{footerDescription}}
 				</div>
 				<div class="footer_social">
-						<a href="https://github.com/Stinger100" target="_blank"><img v-bind:src="githubImg" margin:10px></a> 
-						<a href="https://www.linkedin.com/in/marianzoicas21/"target="_blank"><img v-bind:src="linkedinImg"></a> 
-						<a href="mailto:marian.zoicas@gmail.com" target="_blank"><img v-bind:src="gmailImg"></a> 
+						<a class="rotate" href="https://github.com/Stinger100" target="_blank"><img v-bind:src="githubImg" margin:10px></a> 
+						<a class="rotate" href="https://www.linkedin.com/in/marianzoicas21/" target="_blank"><img v-bind:src="linkedinImg"></a> 
+						<a class="rotate" href="mailto:marian.zoicas@gmail.com" target="_blank"><img v-bind:src="gmailImg"></a> 
 				</div>
 				<div class="footer_copyright">
 					{{footerCopyright}}
@@ -53,10 +53,30 @@ export default {
     width: 150px;
     padding:20px;
 }
+.rotate {
+     animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(359deg);
+  }
+}
 .footer_description {
     padding: 20px;
 }
 .footer_copyright {
 padding: 20px;
 }
+
+  /* media queries */
+
+ @media screen and (max-width: 600px) {
+     .footer {
+         height: 400px;
+     }
+ }
 </style>

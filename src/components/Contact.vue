@@ -1,8 +1,10 @@
 <template>
+<section id="contact">
     	<div class="contact">
 				<p>{{title}}</p>
 				<p><button><a href="mailto:marian.zoicas@gmail.com" target="_blank">Contact me</a></button></p>
 			</div>
+</section>
 </template>
 <script>
 export default {
@@ -20,6 +22,7 @@ export default {
  display: flex;
  background: #293347;
  justify-content: space-around;
+ flex-wrap: wrap;
  width: 80%;
  margin: 0 auto;
  color: #ffffff;
@@ -44,5 +47,16 @@ button a {
 }
 button:hover {
     background: #8C43FF;
+}
+/* media query */
+@media screen and (max-width: 600px) {
+.contact {
+    padding: 10px 5px;
+    height: 100px;
+    font-size: 0.7rem;
+    }
+    button {
+        padding: 0.8rem;
+    }
 }
 </style>
