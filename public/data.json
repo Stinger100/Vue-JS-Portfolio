@@ -1,0 +1,23 @@
+{
+    "about":
+        {
+            "aboutTitle": "I am more than pleased to meet you!",
+            "aboutDescription": "My story as a programmer started in 2015 when I have moved to Denmark in order to begin my studies. During my studies at Multimedia Design and Web Development profiles, I have gained several knowledge in the User Research and Design Thinking fields, combined with the skills in Design of Adobe Tools and the programming abilities in several programming languages, I believe I am the right person that you are looking for."
+        },
+    "contact": {
+            "contactTitle": "Do you believe we can do great things together?"
+        },
+     "footer": {
+            "footerDescription": "When Coding becomes more than just a hobby",
+            "footerCopyright": "© Copyright 2019 by Marian Zoicas"
+        },
+     "header": {
+            "headerTitle": "Looking for a web developer? Then you are on the right page!",
+            "headerDescription": "My name is Marian and I like to build web applications.",
+            "headerDescription2": "Frontend / VueJS / Umbraco"
+        },
+    "projectsSkill": {
+            "projectsTitle": "My Newest Projects",
+            "projectsDescription": "Below you can see an overview of my last projects" 
+        }
+}

@@ -39,11 +39,11 @@
     
      <div class="text-card">
 		    <div class="text-card_title">
-		        {{title}}
+		        {{content.header.headerTitle}}
 		    </div>
 		    <div class="text-card_description">
-               <p> {{description}} </p>
-               <p> {{description2}} </p>
+               <p> {{content.header.headerDescription}} </p>
+               <p> {{content.header.headerDescription2}} </p>
 		   </div>
     </div>
     <div class="avatar">
@@ -59,12 +59,13 @@ const VueScrollTo = require('vue-scrollto')
 
 export default {
     name: 'Header',
+    props: ['content'],
     data() {
         return{
             logoImg: require ("../assets/Logo.png"),
-            title: 'Looking for a web developer? Then you are on the right page!',
-            description: 'My name is Marian and I like to build web applications.',
-            description2: 'Frontend / VueJS / Umbraco',
+            headerTitle: 'Looking for a web developer? Then you are on the right page!',
+            headerDescription: 'My name is Marian and I like to build web applications.',
+            headerDescription2: 'Frontend / VueJS / Umbraco',
             avatarImg: require ("../assets/avatar2.jpg"),
             devImg: require ("../assets/design.png"),
             navBarClicked: false,

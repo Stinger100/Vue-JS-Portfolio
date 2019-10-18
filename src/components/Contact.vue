@@ -1,7 +1,7 @@
 <template>
 <section id="contact">
     	<div class="contact">
-				<p>{{title}}</p>
+				<p>{{content.contact.contactTitle}}</p>
 				<p><button><a href="mailto:marian.zoicas@gmail.com" target="_blank">Contact me</a></button></p>
 			</div>
 </section>
@@ -9,11 +9,7 @@
 <script>
 export default {
     name: 'Contact',
-    data() {
-        return {
-            title: 'Do you believe we can do great things together?'
-        }
-    }
+    props: ['content']
 }
 </script>
 <style scoped>

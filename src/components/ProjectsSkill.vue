@@ -2,10 +2,10 @@
 <section id="projects">
     <div class="projectsGrid">
 				<div class="projectsTitle">
-					<h3>{{projectsTitle}}</h3>
+					<h3>{{content.projectsSkill.projectsTitle}}</h3>
 				</div>
 				<div class="projectsDescription">
-					<p>{{projectsDescription}}</p>
+					<p>{{content.projectsSkill.projectsDescription}}</p>
 				</div>
 				<div class="projectGrid_content">
 						<div class="projectsGrid_item" 
@@ -14,7 +14,6 @@
 							<div class="projectsGrid_item_overlay">
 								<p>{{project.name}}</p>
 								<p>Languages used: {{project.LanguagesUsed}}</p>
-                                <p><button><a v-bind:href="project.link"></a>View project</button></p>	
 							</div>
 				</div>
 		</div>
@@ -24,14 +23,13 @@
 <script>
 export default {
     name: 'ProjectsSkill',
+    props: ['content'],
     data() {
         return {
-            projectsTitle: 'My Newest Projects',
-			projectsDescription: 'Below you can see an overview of my last projects',
 			projects: [
-			{name:'Football Blog', image: require('../assets/portfolio.png'), LanguagesUsed:'Javascript, HTML5, CSS3, Node.Js, MongoDB', link:'https://github.com/Stinger100/Football-Blog'},
-			{name:'React Project', image: require('../assets/portfolio2.png'), LanguagesUsed:'Javascript, HTML5, CSS3, REACT', link:'https://github.com/Stinger100/React-Project'},
-			{name:'Promotional Website for Private Ambulance Company', image: require('../assets/portfolio3.png'), LanguagesUsed:'Javascript, HTML5, CSS3, Wordpress', link:'https://ambulantasfantulandrei.ro/'},
+			{name:'Football Blog', image: require('../assets/portfolio.png'), LanguagesUsed:'Javascript, HTML5, CSS3, Node.Js, MongoDB'},
+			{name:'React Project', image: require('../assets/portfolio2.png'), LanguagesUsed:'Javascript, HTML5, CSS3, REACT'},
+			{name:'Promotional Website for Private Ambulance Company', image: require('../assets/portfolio3.png'), LanguagesUsed:'Javascript, HTML5, CSS3, Wordpress'},
 			{name:'Vue JS CRUD Interface', image: require('../assets/portfolio4.png'), LanguagesUsed:'Javascript, HTML5, CSS3, VUE.JS'}
 			]}
         }

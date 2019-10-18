@@ -4,7 +4,7 @@
 			<a href="/"><img class="logoImg" alt="Marian logo" v-bind:src="logoImage"></a> 
 				</div>
 				<div class="footer_description">
-					{{footerDescription}}
+					{{content.footer.footerDescription}}
 				</div>
 				<div class="footer_social">
 						<a class="rotate" href="https://github.com/Stinger100" target="_blank"><img v-bind:src="githubImg" margin:10px></a> 
@@ -12,21 +12,20 @@
 						<a class="rotate" href="mailto:marian.zoicas@gmail.com" target="_blank"><img v-bind:src="gmailImg"></a> 
 				</div>
 				<div class="footer_copyright">
-					{{footerCopyright}}
+					{{content.footer.footerCopyright}}
 				</div>
 		</div>
 </template>
 <script>
 export default {
     name: 'Footer',
+    props: ['content'],
     data() {
         return {
             logoImage: require('../assets/Logo.png'),
             githubImg: require('../assets/github-logo.png'),
 			linkedinImg: require('../assets/linkedin-letters.png'),
             gmailImg: require('../assets/gmail-logo.png'),
-            footerDescription: '"When Coding becomes more than just a hobby"',
-            footerCopyright: '© Copyright 2019 by Marian Zoicas'
         }
     }
 }

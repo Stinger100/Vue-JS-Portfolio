@@ -1,20 +1,16 @@
 <template>
 <section id="about">
     <div class="aboutMe">
-        <h3>{{title}}</h3>
-        <p>{{description}}</p>
+        <h3>{{content.about.aboutTitle}}</h3>
+        <p>{{content.about.aboutDescription}}</p>
+        <p></p>
 	</div>
 </section>
 </template>
 <script>
 export default {
     name: 'AboutMe',
-    data() {
-        return {
-            title: 'I am more than pleased to meet you!',
-            description: 'My story as a programmer started in 2015 when I have moved to Denmark in order to begin my studies. During my studies at Multimedia Design and Web Development profiles, I have gained several knowledge in the User Research and Design Thinking fields, combined with the skills in Design of Adobe Tools and the programming abilities in several programming languages, I believe I am the right person that you are looking for.'
-        }
-    }
+    props: ['content']
 }
 </script>
 <style  scoped>
