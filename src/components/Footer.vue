@@ -1,19 +1,22 @@
 <template>
     <div class="footer">
-				<div class="footer_logo">
-			<a href="/"><img class="logoImg" alt="Marian logo" v-bind:src="logoImage"></a> 
-				</div>
-				<div class="footer_description">
-					{{content.footer.footerDescription}}
-				</div>
-				<div class="footer_social">
+		<div class="footer_logo">
+			<a v-scroll-to="{
+                el:'#header',
+                duration: 7000
+            }"><img class="logoImg" alt="Marian logo" v-bind:src="logoImage"></a> 
+		</div>
+		<div class="footer_description">
+					<p>"{{content.footer.footerDescription}}"</p>
+		</div>
+		<div class="footer_social">
 						<a class="rotate" href="https://github.com/Stinger100" target="_blank"><img v-bind:src="githubImg" margin:10px></a> 
 						<a class="rotate" href="https://www.linkedin.com/in/marianzoicas21/" target="_blank"><img v-bind:src="linkedinImg"></a> 
 						<a class="rotate" href="mailto:marian.zoicas@gmail.com" target="_blank"><img v-bind:src="gmailImg"></a> 
-				</div>
-				<div class="footer_copyright">
+		</div>
+		<div class="footer_copyright">
 					{{content.footer.footerCopyright}}
-				</div>
+		</div>
 		</div>
 </template>
 <script>
@@ -40,8 +43,17 @@ export default {
     background: #8C43FF;
     margin-top: 75px;
 }
+a {
+    cursor: pointer;
+}
 .footer_logo {
     padding: 20px;
+}
+.footer_logo img:hover {
+-webkit-animation: swing 3s ease;
+        animation: swing 3s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
 }
 .logoImg {
     width: 70px;

@@ -1,8 +1,9 @@
 <template>
+    <section id="header">
     <div class="header">
         <div class="navbar">
             <div class="logoImg">
-                     <img class="logoImg" alt="Marian logo" v-bind:src="logoImg">
+                     <a href="/"><img class="logoImg"  alt="Marian logo" v-bind:src="logoImg"></a>
             </div>
             <ul>
                 <li><a v-scroll-to="'#about'">About Me</a></li>
@@ -53,6 +54,7 @@
 	    <img class="dev-image" alt="Development Image" v-bind:src="devImg">
 	</div>
  </div>
+    </section>
 </template>
 <script>
 const VueScrollTo = require('vue-scrollto')
@@ -121,6 +123,12 @@ ul {
   }
   .logoImg  {
   width: 50px;
+}
+.logoImg img:hover {
+    -webkit-animation: swing 3s ease;
+        animation: swing 3s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
 }
  
 .text-card {

@@ -2,14 +2,32 @@
 <section id="contact">
     	<div class="contact">
 				<p>{{content.contact.contactTitle}}</p>
-				<p><button><a href="mailto:marian.zoicas@gmail.com" target="_blank">Contact me</a></button></p>
-			</div>
+				<p><button v-on:click="showContanctInfo()"><a href="mailto:marian.zoicas@gmail.com" target="_blank">Contact me</a></button></p>
+			    <transition name="swing"
+                enter-active-class="animated bounceInLeft"
+                leave-active-class="animated bounceOutRight">>
+                <p v-if="clicked">Our collaboration is now even closer</p>
+			    </transition>
+            </div>
 </section>
 </template>
 <script>
 export default {
     name: 'Contact',
-    props: ['content']
+    props: ['content'],
+    data() {
+        return {
+            clicked: false
+        }
+    },
+    methods: {
+        showContanctInfo: function () {
+            this.clicked= true;
+             setTimeout(() => {
+            this.clicked = false;
+        }, 5000);
+        }
+    }
 }
 </script>
 <style scoped>

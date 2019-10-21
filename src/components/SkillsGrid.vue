@@ -90,6 +90,11 @@ export default {
   .skill_title {
       text-align: center;
   }
+  .skill_title img:hover{
+	     -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+  }
   /* media queries */
   @media screen and (max-width: 600px) {
 	  .skillGrid {

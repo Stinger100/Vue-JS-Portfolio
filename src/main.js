@@ -4,7 +4,6 @@ import VueScroll from 'vue-scrollto';
 import axios from 'axios';
 
 
-
 Vue.use(VueScroll, {
   easing: [.6, .80, .30, 1.9],
   duration: 3000 

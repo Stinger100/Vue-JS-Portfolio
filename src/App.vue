@@ -68,9 +68,9 @@ export default {
   },
   methods: {
     fetchData() {
-      axios.get(this.baseUrl + 'data.json').then(response => {
+      axios.get(this.baseUrl + 'data.json')
+      .then(response => {
           { this.content = response.data }
-           console.log(this.content.projectsSkill);   
     })
     }
   },

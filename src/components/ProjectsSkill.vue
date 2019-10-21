@@ -30,7 +30,9 @@ export default {
 			{name:'Football Blog', image: require('../assets/portfolio.png'), LanguagesUsed:'Javascript, HTML5, CSS3, Node.Js, MongoDB'},
 			{name:'React Project', image: require('../assets/portfolio2.png'), LanguagesUsed:'Javascript, HTML5, CSS3, REACT'},
 			{name:'Promotional Website for Private Ambulance Company', image: require('../assets/portfolio3.png'), LanguagesUsed:'Javascript, HTML5, CSS3, Wordpress'},
-			{name:'Vue JS CRUD Interface', image: require('../assets/portfolio4.png'), LanguagesUsed:'Javascript, HTML5, CSS3, VUE.JS'}
+            {name:'Vue JS CRUD Interface', image: require('../assets/portfolio4.png'), LanguagesUsed:'Javascript, HTML5, CSS3, VUE.JS'},
+            {name:'Promotional Website for Javascript Framework', image: require('../assets/monsterr.png'), LanguagesUsed:'NodeJs, Javacript, CSS3, HTML5'},
+            {name:'PHP MVC Project', image: require('../assets/boozt.png'), LanguagesUsed:'PHP, MYSQLI, Javascript, HTML5, CSS3'}
 			]}
         }
     }
